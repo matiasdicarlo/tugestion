@@ -2,11 +2,10 @@
 services:
   - type: web
     name: migestion-backend
-    env: java
+    env: docker
     plan: free
     branch: master
-    buildCommand: ./mvnw clean package -DskipTests
-    startCommand: java -jar target/*.jar
+    dockerfilePath: ./Dockerfile
     envVars:
       - key: DATABASE_URL
         value: postgresql://migestionuser:3J0wKFbNkbv5m4n6yQjvCal3jrPc27bT@dpg-d5j1cauuk2gs73dn44kg-a/migestiondb
