@@ -1,0 +1,22 @@
+# render.yaml - Configuración para Render
+services:
+  - type: web
+    name: migestion-backend
+    env: java
+    plan: free
+    branch: master
+    buildCommand: ./mvnw clean package -DskipTests
+    startCommand: java -jar target/*.jar
+    envVars:
+      - key: DATABASE_URL
+        value: postgresql://migestionuser:3J0wKFbNkbv5m4n6yQjvCal3jrPc27bT@dpg-d5j1cauuk2gs73dn44kg-a/migestiondb
+      - key: DB_HOST
+        value: dpg-d5j1cauuk2gs73dn44kg-a
+      - key: DB_NAME
+        value: migestiondb
+      - key: DB_USER
+        value: migestionuser
+      - key: DB_PASSWORD
+        value: 3J0wKFbNkbv5m4n6yQjvCal3jrPc27bT
+      - key: JWT_SECRET
+        value: 1234567890ABCDEF1234567890ABCDEF
