@@ -1,11 +1,13 @@
 # Usamos JDK 17 ligero
 FROM eclipse-temurin:17-jdk-alpine
 
-# Directorio de trabajo dentro del contenedor
 WORKDIR /app
 
 # Copiamos todo el proyecto
 COPY . .
+
+# Le damos permisos de ejecución a mvnw
+RUN chmod +x mvnw
 
 # Build del proyecto
 RUN ./mvnw clean package -DskipTests
