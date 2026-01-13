@@ -6,12 +6,4 @@ services:
     plan: free
     branch: master
     dockerfilePath: ./Dockerfile
-    envVars:
-      - key: JDBC_DATABASE_URL
-        value: jdbc:postgresql://dpg-d5j1cauuk2gs73dn44kg-a:5432/migestiondb
-      - key: DB_USER
-        value: migestionuser
-      - key: DB_PASSWORD
-        value: 3J0wKFbNkbv5m4n6yQjvCal3jrPc27bT
-      - key: JWT_SECRET
-        value: 1234567890ABCDEF1234567890ABCDEF
+    
