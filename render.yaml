@@ -7,10 +7,8 @@ services:
     branch: master
     dockerfilePath: ./Dockerfile
     envVars:
-      - key: DB_HOST
-        value: dpg-d5j1cauuk2gs73dn44kg-a
-      - key: DB_NAME
-        value: migestiondb
+      - key: JDBC_DATABASE_URL
+        value: jdbc:postgresql://dpg-d5j1cauuk2gs73dn44kg-a:5432/migestiondb
       - key: DB_USER
         value: migestionuser
       - key: DB_PASSWORD
